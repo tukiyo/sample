@@ -1,0 +1,13 @@
+# mysql> show variables like "char%";
+
+[client]
+default-character-set=utf8
+
+[mysqld]
+skip-character-set-client-handshake
+#default-time-zone = "Asia/Tokyo"
+character-set-server = utf8
+collation-server = utf8_general_ci
+
+[mysqldump]
+default-character-set=utf8
