@@ -1,0 +1,1 @@
+localで動かすsmtpd。動作にはpostfixなどが必要かと。
