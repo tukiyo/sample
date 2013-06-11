@@ -1,0 +1,54 @@
+;***** 二重起動の防止  (sysopt02.hsp) *****
+
+#module
+;***** 必要となるAPIや定数の定義 *****
+#uselib "kernel32.dll"
+#cfunc CreateMutex "CreateMutexA" int,int,sptr
+#cfunc GetLastError "GetLastError"
+
+#deffunc wexapend str prm1
+strname=prm1
+;***** 名前の文字列が省略された場合 *****
+if strlen(strname)==0 : strname="HSP300ONIWND"  ;Default String
+ret=CreateMutex(0,1,strname)
+;二重起動か？
+if GetLastError()==0    : return 0	;同じジョブが起動していない
+if GetLastError()==183 {
+	dialog "既に起動しています。"
+	return 1	;既に起動している
+}
+return -1
+#global
+
+;***** Main *****
+
+#include "user32.as"
+// 修飾子の定義
+#define MOD_ALT 1
+#define MOD_CONTROL 2
+#define MOD_SHIFT 4
+#define MOD_WIN 8
+	
+/* ウィンドウ非表示 */	
+	screen 0,,,2
+	/* 二重起動防止 */	
+	wexapend "sakurascript" : if stat : end
+	
+	oncmd gosub *on_hotkey, 0x0312/*WM_HOTKEY*/
+	onexit gosub *e
+	;RegisterHotKey hwnd, 0xB000, 0, 29 /*無変換*/
+	RegisterHotKey hwnd, 0xB000, MOD_ALT, 29 /*ALT+無変換*/
+
+stop
+
+*on_hotkey
+	if wparam == 0xB000 {
+		dirpath = dir_desktop + "\\shortcuts"
+		dirlist s, dirpath, 5
+		if stat = 0 :dialog dirpath+"が存在しません。" :stop
+	}
+return
+*e
+	UnregisterHotKey hWnd, 0xB000
+	end
+return
