@@ -1,0 +1,6 @@
+! underscore
+keycode  97 = underscore
+! kana
+keycode 100 = Right Left
+! muhenkan
+keycode 102 = Tab
