@@ -1,0 +1,300 @@
+bash-4.1# cd /opt/alminium/
+bash-4.1# USER=root bash ./smelt
+RHEL 6.x / CentOS 6.x / OEL 6.xが検出されました。
+*******************************************************
+  ホスト名の設定
+*******************************************************
+ホスト名(IPアドレスもしくはDNS名)を入力してください。ホスト名はApacheのバーチャルホストで利用されます。
+例えば、192.168.1.4をホスト名で入力すると、http://192.168.1.4/でアクセスすることになります。
+(上記の設定ではhttp://localhost/では接続できないのでご注意ください)
+ホスト名: localhost
+
+
+*******************************************************
+  SSLのサポート
+*******************************************************
+SSLのサポートを有効にすると、httpsのみの接続を許可します。
+httpでのアクセスは、全てhttpsのポートへ転送されるようになります。
+SSLの証明書は認証機関により署名されたものではありません。通信の暗号化のみ
+に利用します。
+gitの利用では、
+
+  $ git config --global http.sslVerify false
+
+などのコマンドで、SSLの証明書を無効にする必要があります。
+
+SSL(https)サポートを有効にしますか?(y/N) n
+
+
+*******************************************************
+  メール設定
+*******************************************************
+Redmineのシステムメールを送信するための設定を行います。
+
+＜利用する上での注意＞
+・利用したいメールシステムと通信可能なことをご確認ください。ファイアーウォールなどで遮断されている場合は管理者にお問い合わせください。
+・Sendmailコマンドを利用する場合、別途Sendmailの設定を行う必要があります。
+・G-Mail/Hotmailを利用する場合、ユーザー名とパスワードがあれば利用可能です。
+
+次の中から、使いたいメールシステムを選択してください。
+ここでメール設定を行わない場合は「N」を選択してください。
+
+0. 独自のメールサーバーを設定する
+1. Linux内のSendmailコマンドを使用する
+2. G-Mail/Google Apps
+3. Windows Live Hotmail
+
+N. メール設定をしない
+
+番号選択: n
+
+
+メール設定を行いません。
+
+
+継続的インテグレーションツールのJenkinsのインストール・設定を行うことができます。デフォルトはインストールしません。よく分からなければNを選択してください。Jenkinsをインストールしますか?[y/N]n
+which: no rake2.0 in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/rvm/rubies/ruby-2.1-head/bin:/usr/local/rvm/bin/)
+mysqld を起動中:                                           [  OK  ]
+ERROR 1007 (HY000) at line 1: Can't create database 'alminium'; database exists
+cp: `config/database.yml' と `/opt/alminium/config/database.yml' は同じファイルです
+cp: `config/scm.yml' と `/opt/alminium/config/scm.yml' は同じファイルです
+/opt/alminium /opt/alminium
+*** execute bundle ***
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this
+machine.
+Using rake 10.1.1
+Using i18n 0.6.11
+Using multi_json 1.10.1
+Using activesupport 3.2.19
+Using builder 3.0.0
+Using activemodel 3.2.19
+Using erubis 2.7.0
+Using journey 1.0.4
+Using rack 1.4.5
+Using rack-cache 1.2
+Using rack-test 0.6.2
+Using hike 1.2.3
+Using tilt 1.4.1
+Using sprockets 2.2.2
+Using actionpack 3.2.19
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 3.2.19
+Using arel 3.0.3
+Using tzinfo 0.3.40
+Using activerecord 3.2.19
+Using activeresource 3.2.19
+Using awesome_nested_set 2.1.6
+Using coderay 1.1.0
+Using daemon_controller 1.2.0
+Using daemons 1.1.9
+Using eventmachine 1.0.3
+Using holidays 1.0.6
+Using icalendar 2.1.0
+Using rack-ssl 1.3.4
+Using json 1.8.1
+Using rdoc 3.12.2
+Using thor 0.19.1
+Using railties 3.2.19
+Using jquery-rails 2.0.3
+Using mini_portile 0.6.0
+Using mysql2 0.3.16
+Using net-ldap 0.3.1
+Using nokogiri 1.6.2.1
+Using open-uri-cached 0.0.5
+Using passenger 4.0.45
+Using pdf-core 0.2.5
+Using ttfunk 1.2.0
+Using prawn 1.1.0
+Using ruby-openid 2.3.0
+Using rack-openid 1.4.2
+Using bundler 1.6.3
+Using rails 3.2.19
+Using rake-compiler 0.9.2
+Using redcarpet 2.3.0
+Using rmagick 2.13.2
+Using ruby-ole 1.2.11.7
+Using rubyzip 1.1.6
+Using spreadsheet 0.9.7
+Using sqlite3 1.3.9
+Using thin 1.6.2
+Your bundle is complete!
+Gems in the groups development, test, postgresql and sqlite were not installed.
+It was installed into ./vendor/bundler
+
+Select language: ar, az, bg, bs, ca, cs, da, de, el, en, en-GB, es, et, eu, fa, fi, fr, gl, he, hr, hu, id, it, ja, ko, lt, lv, mk, mn, nl, no, pl, pl-PL, pt, pt-BR, ro, ru, sk, sl, sq, sr, sr-YU, sv, th, tr, uk, vi, zh, zh-TW [en] ====================================
+Some configuration data is already loaded.
+/opt/alminium
+HEAD is now at 00a8494... Changes version to 0.2.1.t4. fixes #34
+Already on 'master'
+Already on 'master'
+Already on 'backlogs-support'
+error: pathspec 'master' did not match any file(s) known to git.
+Already on 'alm'
+Already on 'master'
+Already on 'master'
+Already on 'master'
+Already on 'develop'
+Already on 'master'
+Already on 'master'
+/opt/alminium /opt/alminium
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this
+machine.
+Using rake 10.1.1
+Using i18n 0.6.11
+Using multi_json 1.10.1
+Using activesupport 3.2.19
+Using builder 3.0.0
+Using activemodel 3.2.19
+Using erubis 2.7.0
+Using journey 1.0.4
+Using rack 1.4.5
+Using rack-cache 1.2
+Using rack-test 0.6.2
+Using hike 1.2.3
+Using tilt 1.4.1
+Using sprockets 2.2.2
+Using actionpack 3.2.19
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 3.2.19
+Using arel 3.0.3
+Using tzinfo 0.3.40
+Using activerecord 3.2.19
+Using activeresource 3.2.19
+Using awesome_nested_set 2.1.6
+Using coderay 1.1.0
+Using daemon_controller 1.2.0
+Using daemons 1.1.9
+Using eventmachine 1.0.3
+Using holidays 1.0.6
+Using icalendar 2.1.0
+Using rack-ssl 1.3.4
+Using json 1.8.1
+Using rdoc 3.12.2
+Using thor 0.19.1
+Using railties 3.2.19
+Using jquery-rails 2.0.3
+Using mini_portile 0.6.0
+Using mysql2 0.3.16
+Using net-ldap 0.3.1
+Using nokogiri 1.6.2.1
+Using open-uri-cached 0.0.5
+Using passenger 4.0.45
+Using pdf-core 0.2.5
+Using ttfunk 1.2.0
+Using prawn 1.1.0
+Using ruby-openid 2.3.0
+Using rack-openid 1.4.2
+Using bundler 1.6.3
+Using rails 3.2.19
+Using rake-compiler 0.9.2
+Using redcarpet 2.3.0
+Using rmagick 2.13.2
+Using ruby-ole 1.2.11.7
+Using rubyzip 1.1.6
+Using spreadsheet 0.9.7
+Using sqlite3 1.3.9
+Using thin 1.6.2
+Your bundle is complete!
+Gems in the groups development, test, postgresql and sqlite were not installed.
+It was installed into ./vendor/bundler
+Migrating clipboard_image_paste (Clipboard image paste)...
+Migrating redmine_backlogs (Redmine Backlogs)...
+Migrating redmine_banner (Redmine Banner plugin)...
+Migrating redmine_charts (Redmine Charts)...
+Migrating redmine_code_review (Redmine Code Review plugin)...
+Migrating redmine_drafts (Redmine Drafts plugin)...
+Migrating redmine_git_branch_hook (Redmine Git Branch Hook plugin)...
+Migrating redmine_hudson (Redmine Hudson plugin)...
+Migrating redmine_importer (Issue Importer)...
+Migrating redmine_local_avatars (Redmine Local Avatars plugin)...
+Migrating redmine_plugin_views_revisions (Redmine plugin views revisions plugin)...
+Migrating redmine_scm (SCM Creator)...
+Migrating redmine_spent_time_column (Redmine Spent Time Column)...
+Migrating redmine_xls_export (Issues XLS export)...
+Redmine version: 2.5.2
+Redmine revision: unknown
+---------- Updating revisions.... ----------
+-------- processing plugin clipboard_image_paste
+-------- processing plugin redmine_backlogs
+-------- processing plugin redmine_banner
+-------- processing plugin redmine_charts
+-------- processing plugin redmine_code_review
+-------- processing plugin redmine_drafts
+-------- processing plugin redmine_git_branch_hook
+-------- processing plugin redmine_hudson
+-------- processing plugin redmine_importer
+-------- processing plugin redmine_local_avatars
+-------- processing plugin redmine_plugin_views_revisions
+-------- processing plugin redmine_scm
+-------- processing plugin redmine_spent_time_column
+-------- processing plugin redmine_xls_export
+    Removing obsolete file /app/views/issues/xls_export_action.rhtml
+    Using version 2.2.0 for file /app/views/settings/_xls_export_settings.html.erb
+    Using version 2.0.0 for file /app/views/xls_export/index.html.erb
+    Using version 2.3.0 for file /assets/stylesheets/xls_export.css
+Done
+2.5.2.stable. You are running backlogs v1.0.6, latest version is 1.0.6
+
+=====================================================
+             Redmine Backlogs Installer
+=====================================================
+Installing to the production environment.
+Default labels installed
+Creating task tracker 'サポート'
+Story and task trackers are now set.
+Migrating the database...** Invoke redmine:plugins:migrate (first_time)
+** Invoke environment (first_time)
+** Execute environment
+** Execute redmine:plugins:migrate
+** Invoke db:schema:dump (first_time)
+** Invoke environment
+** Invoke db:load_config (first_time)
+** Execute db:load_config
+** Execute db:schema:dump
+** Invoke redmine:backlogs:fix_positions (first_time)
+** Invoke environment (first_time)
+** Execute environment
+** Execute redmine:backlogs:fix_positions
+done!
+Installation complete. Please restart Redmine.
+Thank you for trying out Redmine Backlogs!
+/opt/alminium
+*** run initialize SQL ***
+cp: `bin/alm-scm-post-create' と `/opt/alminium/bin/alm-scm-post-create' は同じファイルです
+cp: `bin/alm-sync-scm' と `/opt/alminium/bin/alm-sync-scm' は同じファイルです
+cp: `hooks' と `/opt/alminium/hooks' は同じファイルです
+grep: /etc/selinux/config: そのようなファイルやディレクトリはありません
+grep: /etc/sysconfig/iptables: そのようなファイルやディレクトリはありません
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables v1.4.7: can't initialize iptables table `filter': Permission denied (you must be root)
+Perhaps iptables or your kernel needs to be upgraded.
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+tcp 80番ポートのアクセスを許可しました
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables v1.4.7: can't initialize iptables table `filter': Permission denied (you must be root)
+Perhaps iptables or your kernel needs to be upgraded.
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+tcp 443番ポートのアクセスを許可しました
+Stopping httpd:                                            [FAILED]
+Starting httpd: httpd: Syntax error on line 221 of /etc/httpd/conf/httpd.conf: Syntax error on line 1 of /etc/httpd/conf.d/redmine.conf: Cannot load /usr/lib64/ruby/gems/2.1.0/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so into server: /usr/lib64/ruby/gems/2.1.0/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so: cannot open shared object file: No such file or directory
+                                                           [FAILED]
+bash-4.1# find / 2>/dev/null | grep mod_passenger
+/opt/alminium/vendor/bundler/ruby/2.1.0/gems/passenger-4.0.45/ext/apache2/mod_passenger.c
+/usr/local/rvm/rubies/ruby-2.1-head/lib/ruby/gems/2.1.0/gems/passenger-4.0.45/ext/apache2/mod_passenger.c
+bash-4.1#
