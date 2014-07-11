@@ -1,0 +1,55 @@
+access("/usr/sbin/httpd", X_OK)         = 0
+stat("/usr/sbin/httpd", {st_mode=S_IFREG|0755, st_size=354816, ...}) = 0
+geteuid()                               = 0
+getegid()                               = 0
+getuid()                                = 0
+getgid()                                = 0
+access("/usr/sbin/httpd", X_OK)         = 0
+pipe2([7, 8], O_CLOEXEC)                = 0
+fstat(7, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+fstat(8, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+pipe2([9, 10], O_CLOEXEC)               = 0
+fstat(9, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+fstat(10, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0x7f21c79e49d0) = 545
+close(10)                               = 0
+read(9, "", 4)                          = 0
+close(9)                                = 0
+close(8)                                = 0
+fstat(7, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+read(7, "Server version: Apache/2.2.15 (U"..., 8192) = 74
+--- SIGCHLD (Child exited) @ 0 (0) ---
+read(7, "", 8118)                       = 0
+close(7)                                = 0
+wait4(545, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 545
+write(1, "      Found: \33[1m\33[32myes\33[0m\33[3"..., 39      Found: yes) = 39
+write(1, "\n", 1
+)                       = 1
+write(1, "      Location of httpd: /usr/sb"..., 40      Location of httpd: /usr/sbin/httpd) = 40
+write(1, "\n", 1
+)                       = 1
+write(1, "      Apache version: 2.2.15", 28      Apache version: 2.2.15) = 28
+write(1, "\n", 1
+)                       = 1
+brk(0x3159000)                          = 0x3159000
+write(1, " \33[1m* Checking for Apache 2 dev"..., 65 * Checking for Apache 2 development headers...) = 65
+write(1, "\n", 1
+)                       = 1
+write(1, "      Found: \33[1m\33[32myes\33[0m\33[3"..., 39      Found: yes) = 39
+write(1, "\n", 1
+)                       = 1
+write(1, "      Location of apxs2: /usr/sb"..., 39      Location of apxs2: /usr/sbin/apxs) = 39
+write(1, "\n", 1
+)                       = 1
+stat("/opt/alminium/vendor/bundler/ruby/2.1.0/wrappers/ruby", 0x7fffe3067090) = -1 ENOENT (No such file or directory)
+write(2, "Unable to autodetect the current"..., 336Unable to autodetect the currently active RVM gem set name. This could happen if you ran this program using 'sudo' instead of 'rvmsudo'. When using RVM, you're always supposed to use 'rvmsudo' instead of 'sudo!'.
+
+Please try rerunning this program using 'rvmsudo'. If that doesn't help, please contact this program's author for support.) = 336
+write(2, "\n", 1
+)                       = 1
+write(1, "\33[0m", 4)                   = 4
+rt_sigaction(SIGINT, {SIG_IGN, [], SA_RESTORER|SA_SIGINFO, 0x7f21c7126710}, {0x7f21c746bb70, [], SA_RESTORER|SA_SIGINFO, 0x7f21c7126710}, 8) = 0
+rt_sigaction(SIGINT, {SIG_DFL, [], SA_RESTORER|SA_SIGINFO, 0x7f21c7126710}, {SIG_IGN, [], SA_RESTORER|SA_SIGINFO, 0x7f21c7126710}, 8) = 0
+write(4, "!", 1)                        = 1
+munmap(0x7f21c6144000, 1052672)         = 0
+exit_group(1)                           = ?
