@@ -1,0 +1,562 @@
+bash-4.1# cd /opt/alminium/
+bash-4.1# USER=root bash ./smelt
+RHEL 6.x / CentOS 6.x / OEL 6.xが検出されました。
+*******************************************************
+  ホスト名の設定
+*******************************************************
+ホスト名(IPアドレスもしくはDNS名)を入力してください。ホスト名はApacheのバーチャルホストで利用されます。
+例えば、192.168.1.4をホスト名で入力すると、http://192.168.1.4/でアクセスすることになります。
+(上記の設定ではhttp://localhost/では接続できないのでご注意ください)
+ホスト名: localhost
+
+
+*******************************************************
+  SSLのサポート
+*******************************************************
+SSLのサポートを有効にすると、httpsのみの接続を許可します。
+httpでのアクセスは、全てhttpsのポートへ転送されるようになります。
+SSLの証明書は認証機関により署名されたものではありません。通信の暗号化のみ
+に利用します。
+gitの利用では、
+
+  $ git config --global http.sslVerify false
+
+などのコマンドで、SSLの証明書を無効にする必要があります。
+
+SSL(https)サポートを有効にしますか?(y/N) n
+
+
+*******************************************************
+  メール設定
+*******************************************************
+Redmineのシステムメールを送信するための設定を行います。
+
+＜利用する上での注意＞
+・利用したいメールシステムと通信可能なことをご確認ください。ファイアーウォールなどで遮断されている場合は管理者にお問い合わせください。
+・Sendmailコマンドを利用する場合、別途Sendmailの設定を行う必要があります。
+・G-Mail/Hotmailを利用する場合、ユーザー名とパスワードがあれば利用可能です。
+
+次の中から、使いたいメールシステムを選択してください。
+ここでメール設定を行わない場合は「N」を選択してください。
+
+0. 独自のメールサーバーを設定する
+1. Linux内のSendmailコマンドを使用する
+2. G-Mail/Google Apps
+3. Windows Live Hotmail
+
+N. メール設定をしない
+
+番号選択: n
+
+
+メール設定を行いません。
+
+
+継続的インテグレーションツールのJenkinsのインストール・設定を行うことができます。デフォルトはインストールしません。よく分からなければNを選択してください。Jenkinsをインストールしますか?[y/N]n
+which: no rake2.0 in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/rvm/rubies/ruby-head/bin:/usr/local/rvm/bin/)
+mysqld を起動中:                                           [  OK  ]
+ERROR 1007 (HY000) at line 1: Can't create database 'alminium'; database exists
+cp: `config/database.yml' と `/opt/alminium/config/database.yml' は同じファイルです
+cp: `config/scm.yml' と `/opt/alminium/config/scm.yml' は同じファイルです
+/opt/alminium /opt/alminium
+*** execute bundle ***
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this machine.
+Using rake 10.1.1
+Using i18n 0.6.11
+Using multi_json 1.10.1
+Using activesupport 3.2.17
+Using builder 3.0.0
+Using activemodel 3.2.17
+Using erubis 2.7.0
+Using journey 1.0.4
+Using rack 1.4.5
+Using rack-cache 1.2
+Using rack-test 0.6.2
+Using hike 1.2.3
+Using tilt 1.4.1
+Using sprockets 2.2.2
+Using actionpack 3.2.17
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 3.2.17
+Using arel 3.0.3
+Using tzinfo 0.3.40
+Using activerecord 3.2.17
+Using activeresource 3.2.17
+Using awesome_nested_set 2.1.6
+Using coderay 1.1.0
+Using daemon_controller 1.2.0
+Using daemons 1.1.9
+Using eventmachine 1.0.3
+Using holidays 1.0.6
+Using icalendar 2.1.0
+Using rack-ssl 1.3.4
+Using json 1.8.1
+Using rdoc 3.12.2
+Using thor 0.19.1
+Using railties 3.2.17
+Using jquery-rails 2.0.3
+Using mini_portile 0.6.0
+Using mysql2 0.3.16
+Using net-ldap 0.3.1
+Using nokogiri 1.6.2.1
+Using open-uri-cached 0.0.5
+Using passenger 4.0.45
+Using pdf-core 0.2.5
+Using ttfunk 1.2.0
+Using prawn 1.1.0
+Using ruby-openid 2.3.0
+Using rack-openid 1.4.2
+Using bundler 1.6.3
+Using rails 3.2.17
+Using rake-compiler 0.9.2
+Using redcarpet 2.3.0
+Using rmagick 2.13.2
+Using ruby-ole 1.2.11.7
+Using rubyzip 1.1.6
+Using spreadsheet 0.9.7
+Using sqlite3 1.3.9
+Using thin 1.6.2
+Your bundle is complete!
+Gems in the groups development, test, postgresql and sqlite were not installed.
+It was installed into ./vendor/bundler
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+/opt/alminium
+HEAD is now at 00a8494... Changes version to 0.2.1.t4. fixes #34
+Already on 'master'
+Already on 'master'
+Already on 'backlogs-support'
+error: pathspec 'master' did not match any file(s) known to git.
+Already on 'alm'
+Already on 'master'
+Already on 'master'
+Already on 'master'
+Already on 'develop'
+Already on 'master'
+Already on 'master'
+/opt/alminium /opt/alminium
+Don't run Bundler as root. Bundler can ask for sudo if it is needed, and installing your bundle as root will break this application for all non-root users on this machine.
+Using rake 10.1.1
+Using i18n 0.6.11
+Using multi_json 1.10.1
+Using activesupport 3.2.17
+Using builder 3.0.0
+Using activemodel 3.2.17
+Using erubis 2.7.0
+Using journey 1.0.4
+Using rack 1.4.5
+Using rack-cache 1.2
+Using rack-test 0.6.2
+Using hike 1.2.3
+Using tilt 1.4.1
+Using sprockets 2.2.2
+Using actionpack 3.2.17
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 3.2.17
+Using arel 3.0.3
+Using tzinfo 0.3.40
+Using activerecord 3.2.17
+Using activeresource 3.2.17
+Using awesome_nested_set 2.1.6
+Using coderay 1.1.0
+Using daemon_controller 1.2.0
+Using daemons 1.1.9
+Using eventmachine 1.0.3
+Using holidays 1.0.6
+Using icalendar 2.1.0
+Using rack-ssl 1.3.4
+Using json 1.8.1
+Using rdoc 3.12.2
+Using thor 0.19.1
+Using railties 3.2.17
+Using jquery-rails 2.0.3
+Using mini_portile 0.6.0
+Using mysql2 0.3.16
+Using net-ldap 0.3.1
+Using nokogiri 1.6.2.1
+Using open-uri-cached 0.0.5
+Using passenger 4.0.45
+Using pdf-core 0.2.5
+Using ttfunk 1.2.0
+Using prawn 1.1.0
+Using ruby-openid 2.3.0
+Using rack-openid 1.4.2
+Using bundler 1.6.3
+Using rails 3.2.17
+Using rake-compiler 0.9.2
+Using redcarpet 2.3.0
+Using rmagick 2.13.2
+Using ruby-ole 1.2.11.7
+Using rubyzip 1.1.6
+Using spreadsheet 0.9.7
+Using sqlite3 1.3.9
+Using thin 1.6.2
+Your bundle is complete!
+Gems in the groups development, test, postgresql and sqlite were not installed.
+It was installed into ./vendor/bundler
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+rake aborted!
+undefined method `height=' for class `Spreadsheet::Row'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `alias_method'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:25:in `block in format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `each'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:23:in `format_updater'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:58:in `<class:Row>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:19:in `<module:Spreadsheet>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/row.rb:3:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/row.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/worksheet.rb:2:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet/excel/reader.rb:10:in `<top (required)>'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `block in require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:236:in `load_dependency'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/activesupport-3.2.17/lib/active_support/dependencies.rb:251:in `require'
+/opt/alminium/vendor/bundler/ruby/2.2.0/gems/spreadsheet-0.9.7/lib/spreadsheet.rb:28:in `<top (required)>'
+/opt/alminium/config/application.rb:7:in `<top (required)>'
+/opt/alminium/Rakefile:5:in `require'
+/opt/alminium/Rakefile:5:in `<top (required)>'
+(See full trace by running task with --trace)
+cp: ディレクトリ `public/plugin_assets/open_flash_chart' を作成できません: そのようなファイルやディレクトリはありません
+/opt/alminium
+*** run initialize SQL ***
+ERROR 1054 (42S22) at line 32: Unknown column 'updated_on' in 'field list'
+cp: `bin/alm-scm-post-create' と `/opt/alminium/bin/alm-scm-post-create' は同じファイルです
+cp: `bin/alm-sync-scm' と `/opt/alminium/bin/alm-sync-scm' は同じファイルです
+cp: `hooks' と `/opt/alminium/hooks' は同じファイルです
+grep: /etc/selinux/config: そのようなファイルやディレクトリはありません
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables v1.4.7: can't initialize iptables table `filter': Permission denied (you must be root)
+Perhaps iptables or your kernel needs to be upgraded.
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+tcp 80番ポートのアクセスを許可しました
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables v1.4.7: can't initialize iptables table `filter': Permission denied (you must be root)
+Perhaps iptables or your kernel needs to be upgraded.
+FATAL: Could not load /lib/modules/3.10.0-123.el7.x86_64/modules.dep: No such file or directory
+iptables-save v1.4.7: Cannot initialize: Permission denied (you must be root)
+
+tcp 443番ポートのアクセスを許可しました
+Stopping httpd:                                            [FAILED]
+Starting httpd: httpd: Syntax error on line 221 of /etc/httpd/conf/httpd.conf: Syntax error on line 1 of /etc/httpd/conf.d/redmine.conf: Cannot load /usr/lib64/ruby/gems/2.1.0/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so into server: /usr/lib64/ruby/gems/2.1.0/gems/passenger-4.0.45/buildout/apache2/mod_passenger.so: cannot open shared object file: No such file or directory
+                                                           [FAILED]
+bash-4.1#
